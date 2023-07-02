@@ -10,11 +10,19 @@ const HeaderTag = styled.header`
   background-color: #00000007;
 
   & > div:first-child {
+    
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 28px;
+
+    nav{ 
+      display: flex;
+      gap: 28px;
+      font-size: 2.2rem;
+    }
+    
     & a{
       color: #DADADA;
       text-decoration: none; 
@@ -47,6 +55,7 @@ const HeaderTag = styled.header`
     & a{
       color: inherit;
       text-decoration: none;
+      font-size: 2.2rem;
       &:hover{
         text-decoration: underline;
       }

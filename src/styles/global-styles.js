@@ -11,7 +11,14 @@ export const GlobalStyle = createGlobalStyle`
   padding:0 ;
   box-sizing: border-box;
  }
- *, html, body{
+ html{
+  font-size: 62.5%;
+ }
+ html, body{
   font-family: 'Inter' ,sans-serif;
+  
+ }
+ body{
+  font-size: 1.8rem;
  }
 `
