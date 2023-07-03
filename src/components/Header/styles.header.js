@@ -4,11 +4,12 @@ const HeaderTag = styled.header`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  position: absolute;
   
   width: 100%;
   padding: 8px ;
-  background-color: #00000007;
-
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 35px, rgba(20, 20, 20, 0) 59px);
+  
   & > div:first-child {
     
     display: flex;
