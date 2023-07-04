@@ -16,19 +16,19 @@ export const Header = () => {
 
         <nav>
           
-          <NavLink>Home</NavLink>
-          <NavLink>Tv Shows</NavLink>
-          <NavLink>Movies</NavLink>
-          <NavLink>New & Popular</NavLink>
-          <NavLink>My List</NavLink>
-          <NavLink>Browse by Languages</NavLink>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/tvshows" >Tv Shows</NavLink>
+          <NavLink to="/movies">Movies</NavLink>
+          <NavLink to="/newandpopular">New & Popular</NavLink>
+          <NavLink to="/mylist">My List</NavLink>
+          <NavLink to="/browsebylanguage">Browse by Languages</NavLink>
 
         </nav>
       </div>
 
       <div>
         <Search />
-        <NavLink>Kids</NavLink>
+        <NavLink to="/kids">Kids</NavLink>
         <Bell />
         {/* User */}
         <div>

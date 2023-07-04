@@ -9,7 +9,7 @@ const HeaderTag = styled.header`
   width: 100%;
   padding: 8px ;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 35px, rgba(20, 20, 20, 0) 59px);
-  
+
   & > div:first-child {
     
     display: flex;
@@ -18,13 +18,21 @@ const HeaderTag = styled.header`
     justify-content: center;
     gap: 28px;
 
+    & img{
+      width: 110px;
+    }
+
     nav{ 
       display: flex;
       gap: 28px;
-      font-size: 2.2rem;
+      font-size: 1.8rem;
     }
     
     & a{
+      &.active{
+        color: #fff;
+        font-weight: 600;
+      }
       color: #DADADA;
       text-decoration: none; 
       &:hover{
@@ -56,7 +64,11 @@ const HeaderTag = styled.header`
     & a{
       color: inherit;
       text-decoration: none;
-      font-size: 2.2rem;
+      font-size: 1.8rem;
+      &.active{
+        color: #fff;
+        font-weight: 600;
+      }
       &:hover{
         text-decoration: underline;
       }
