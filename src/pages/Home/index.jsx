@@ -5,7 +5,20 @@ import Play from '../../assets/images/Polygon 1.jpg'
 import Info  from '../../assets/images/Info btn.png'
 import MainBG  from '../../assets/images/Main Show BG.jpg'
 
-import {InfoWrapper}  from './styles.home.js'
+import Card  from '../../assets/images/Card.png'
+import Card1  from '../../assets/images/Card-1.png'
+import Card2  from '../../assets/images/Card-2.png'
+import Card3  from '../../assets/images/Card-3.png'
+import Card4  from '../../assets/images/Card-4.png'
+import Card5  from '../../assets/images/Card-5.png'
+import Card6  from '../../assets/images/Card-6.png'
+
+import './styles.carousel.css'
+
+import Carousel from 'react-elastic-carousel'
+
+
+import {InfoWrapper, ItemCarrousel, WrapperCarrousel}  from './styles.home.js'
 import {Main}  from './styles.home.js'
 
 export const Home = () => {
@@ -52,6 +65,21 @@ life — in danger.
       </InfoWrapper>
 
       {/* carroussel films */}
+      <WrapperCarrousel>
+        <Carousel pagination={false} itemsToShow={6} showArrows={false} >
+          <ItemCarrousel bg={Card}> </ItemCarrousel>
+          <ItemCarrousel bg={Card1}> </ItemCarrousel>
+          <ItemCarrousel bg={Card2}> </ItemCarrousel>
+          <ItemCarrousel bg={Card3}> </ItemCarrousel>
+          <ItemCarrousel bg={Card4}> </ItemCarrousel>
+          <ItemCarrousel bg={Card5}> </ItemCarrousel>
+          <ItemCarrousel bg={Card6}> </ItemCarrousel>
+          <ItemCarrousel bg={Card1}> </ItemCarrousel>
+          <ItemCarrousel bg={Card2}> </ItemCarrousel>
+          <ItemCarrousel bg={Card3}> </ItemCarrousel>
+          <ItemCarrousel bg={Card4}> </ItemCarrousel>
+        </Carousel>
+      </WrapperCarrousel>
     </Main>
   )
 }
