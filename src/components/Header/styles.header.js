@@ -5,10 +5,10 @@ const HeaderTag = styled.header`
   flex-direction: row;
   justify-content: space-between;
   position: absolute;
-  
   width: 100%;
-  padding: 8px ;
+  padding: 8px 72px;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 35px, rgba(20, 20, 20, 0) 59px);
+  z-index: 5;
 
   & > div:first-child {
     
@@ -27,8 +27,22 @@ const HeaderTag = styled.header`
       gap: 28px;
       font-size: 1.8rem;
     }
-    
+
     & a{
+      transition: all 0.3s ease-in-out;
+      &::after{
+        display: block;
+        content: '';
+        width: 0;
+        height: 2px;
+        background-color: #DADADA ;
+        transition: all 0.3s ease-in-out;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+      
       &.active{
         color: #fff;
         font-weight: 600;
@@ -36,7 +50,7 @@ const HeaderTag = styled.header`
       color: #DADADA;
       text-decoration: none; 
       &:hover{
-        text-decoration: underline;
+        color: #fff;
       }
     }
   }
@@ -65,12 +79,25 @@ const HeaderTag = styled.header`
       color: inherit;
       text-decoration: none;
       font-size: 1.8rem;
+      transition: all 0.3s ease-in-out;
+      &::after{
+        display: block;
+        content: '';
+        width: 0;
+        height: 2px;
+        background-color: #DADADA ;
+        transition: all 0.3s ease-in-out;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
       &.active{
         color: #fff;
         font-weight: 600;
       }
       &:hover{
-        text-decoration: underline;
+        color: #fff;
       }
     }
   }
