@@ -22,6 +22,11 @@ import {InfoWrapper, ItemCarrousel, WrapperCarrousel}  from './styles.home.js'
 import {Main}  from './styles.home.js'
 
 export const Home = () => {
+const breakPoints = [
+  { width: 1220, itemsToShow: 2 },
+  { width: 1300, itemsToShow: 6 }
+]
+
   return (
     <Main bg={MainBG}>
 
@@ -66,7 +71,7 @@ life — in danger.
 
       {/* carroussel films */}
       <WrapperCarrousel>
-        <Carousel pagination={false} itemsToShow={6} showArrows={false} >
+        <Carousel breakPoints={breakPoints} pagination={false} itemsToShow={6} showArrows={false} >
           <ItemCarrousel bg={Card}> </ItemCarrousel>
           <ItemCarrousel bg={Card1}> </ItemCarrousel>
           <ItemCarrousel bg={Card2}> </ItemCarrousel>

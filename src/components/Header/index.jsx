@@ -1,5 +1,4 @@
-
-import { Bell, ChevronDown, Search } from "lucide-react"
+import { Bell, Cast, ChevronDown, Search } from "lucide-react"
 import HeaderTag  from "./styles.header"
 
 import { NavLink } from 'react-router-dom'
@@ -7,35 +6,49 @@ import { NavLink } from 'react-router-dom'
 
 
 import LogoNetflix from '../../assets/images/NetflixLogo.png'
+import LogoMini from '../../assets/images/netflixlogo mini.png'
+
+
 export const Header = () => {
   return (
     <HeaderTag>
 
       <div>
-        <img src={LogoNetflix} alt="" />
+        <img className="desktop" src={LogoNetflix} alt="" />
+        <img className="mobile" src={LogoMini} alt="" />
 
         <nav>
           
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/tvshows" >Tv Shows</NavLink>
-          <NavLink to="/movies">Movies</NavLink>
-          <NavLink to="/newandpopular">New & Popular</NavLink>
-          <NavLink to="/mylist">My List</NavLink>
-          <NavLink to="/browsebylanguage">Browse by Languages</NavLink>
+          <NavLink className="desktop" to="/">Home</NavLink>
+          <NavLink className="desktop" to="/tvshows" >Tv Shows</NavLink>
+          <NavLink className="desktop" to="/movies">Movies</NavLink>
+          <NavLink className="desktop" to="/newandpopular">New & Popular</NavLink>
+          <NavLink className="desktop" to="/mylist">My List</NavLink>
+          <NavLink className="desktop" to="/browsebylanguage">Browse by Languages</NavLink>
 
         </nav>
       </div>
-
+      {/* nav desk */}
       <div>
-        <Search />
-        <NavLink to="/kids">Kids</NavLink>
-        <Bell />
+        <Search  className="desktop"/>
+        <NavLink className="desktop" to="/kids">Kids</NavLink>
+        <Bell  className="desktop"/>
         {/* User */}
         <div>
+          <Cast className="mobile" />
           <div>
+            {/* box gray */}
           </div>
-          <ChevronDown />
+          <ChevronDown className="desktop" />
         </div>
+      </div>
+      {/* nav mobile */}
+      <div className="mobile">
+        <nav>
+            <NavLink to="/tvshows" >Tv Shows</NavLink>
+            <NavLink to="/Movies" >Movies</NavLink>
+            <div  to="/tvshows" >Categories</div>
+        </nav>
       </div>
 
     </HeaderTag>
