@@ -20,10 +20,11 @@ import Carousel from 'react-elastic-carousel'
 
 import {InfoWrapper, ItemCarrousel, WrapperCarrousel}  from './styles.home.js'
 import {Main}  from './styles.home.js'
-
+import { Plus } from 'lucide-react'
+ 
 export const Home = () => {
 const breakPoints = [
-  { width: 1220, itemsToShow: 2 },
+  { width: 1220, itemsToShow: 1 },
   { width: 1300, itemsToShow: 6 }
 ]
 
@@ -40,21 +41,26 @@ const breakPoints = [
         </div>
         {/* nome do filme */}
         <img src={NomeFilm} alt="" />
-
+        <h4 className='mobile'>TV Mysteries º Based on Books</h4>
         {/* infos do filme */}
         <div>
-          <header>
+          <header className='desktop'>
             <img src={Top10} alt="" />
             <p>#1 in TV Shows Today</p>
           </header>
 
-          <p>
+          <p  className='desktop'> 
           Determined to protect a young patient who escaped a mysterious
 cult, a psychiatrist takes the girl in, putting her own family — and
 life — in danger.
           </p>
 
           <footer>
+            <div className='mobile'>
+              <Plus />
+              My List
+            </div>
+
             <button>
               <img src={Play} alt="" />
               Play
@@ -62,7 +68,8 @@ life — in danger.
 
             <button>
               <img src={Info} alt="" />
-              More Info
+              <span className='desktop'>More Info</span>
+              <span className='mobile'>Info</span>
             </button>
           </footer>
         </div>
@@ -71,6 +78,7 @@ life — in danger.
 
       {/* carroussel films */}
       <WrapperCarrousel>
+        <h3>Popular on Netflix</h3>
         <Carousel breakPoints={breakPoints} pagination={false} itemsToShow={6} showArrows={false} >
           <ItemCarrousel bg={Card}> </ItemCarrousel>
           <ItemCarrousel bg={Card1}> </ItemCarrousel>

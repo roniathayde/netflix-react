@@ -2,6 +2,13 @@ import MainLogo from '../../assets/images/Main Show BG.jpg'
 const { styled } = require("styled-components");
 
 export const Main = styled.main`
+  & .desktop{
+    display: flex;
+  }
+  & .mobile {
+    display: none;
+  }
+
   height: 100vh;
   background-image: url('${props=> props.bg}');
   background-size: cover;
@@ -9,6 +16,20 @@ export const Main = styled.main`
   background-repeat: no-repeat;
   padding-top: 64px;
   filter: brightness(0.8);
+
+
+
+  @media (max-width: 1200px) {
+    & {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      background-color: black;
+      background-size: auto;
+      background-position: 68% -80px;
+      gap: 22px;
+    }
+  }
 `
 
  export const InfoWrapper = styled.div`
@@ -57,7 +78,7 @@ export const Main = styled.main`
 
   & > div:last-child header p{
     font-size: 2.8rem;
-  }
+  } 
   & > div:last-child > p{
     font-size: 2.2rem;
     color: #FFFFFF;
@@ -102,13 +123,99 @@ export const Main = styled.main`
     height: 34px;
     object-fit: contain;
   }
-`
+  @media (max-width: 1200px) {
+    & .desktop{
+      display: none !important;
+    }
+    & .mobile {
+    display: flex ;
+    } 
 
+    &{
+      height: auto;
+      margin-left: 0;
+      align-items: center;
+      width: 100%;
+    }
+    & div img {
+      width: 100%;
+      height: 100%;
+      max-width: 16px;
+      object-fit: contain;
+    }
+    & > img{
+      width: 80%;
+    }
+
+    & h4{
+      color: #FFFFFF;
+      font-weight: 400;
+      font-size: 1.8rem;
+    }
+
+    & > div:last-child{
+      width: 90%;
+    }
+
+    & >div:first-child h3{
+      font-size: 1.8rem;
+      font-weight: 400;
+    }
+    & div:last-child footer{
+      margin-block-start: 24px;
+      justify-content: center;
+    }
+    & div:last-child footer button{
+      font-size: 1.8rem;
+      gap: 4px;
+    }
+    & div:last-child footer button:nth-child(2){
+      width: 44%;
+    }
+    & div:last-child footer button:last-child{
+      width: 100%;
+      height: 100%;
+      max-width: 38px ;
+      max-height: 48px ;
+      flex-direction: column;
+      background-color: transparent;
+      & img{
+        width: 80px;
+        height: 80px;
+      }
+    }
+    & div:last-child footer div.mobile{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #fff;
+    }
+  }
+`
+// styles from carousel
 export const WrapperCarrousel = styled.div`
   margin-left: 72px; 
   height:28%;
-`
+  & h3{
+    color: #fff;
+  }
 
+  @media (max-width: 1200px) {
+    & .desktop{
+      display: none !important;
+    }
+    & h3{
+    font-weight: 400;
+    margin-bottom: 4px;
+    } 
+    &{
+      height: auto;
+      margin-left: 0;
+    }
+  }
+  `
+
+// styles from carousel
 export const ItemCarrousel = styled.div`
   width: 100%;
   height: 200px;
