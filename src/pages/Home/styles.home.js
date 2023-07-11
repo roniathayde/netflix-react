@@ -15,7 +15,11 @@ export const Main = styled.main`
   background-position: center center;
   background-repeat: no-repeat;
   padding-top: 64px;
+  display: flex;
   filter: brightness(0.8);
+  flex-direction: column;
+  justify-content: center;
+  gap: 42px;
 
 
 
@@ -92,7 +96,6 @@ export const Main = styled.main`
   }
 
   & > div:last-child footer button{
-    font-size: 4.0rem;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -100,23 +103,33 @@ export const Main = styled.main`
     gap: 25px;
     font-size:2.8rem;
     font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    box-shadow: inset 0px 0px 0px 3px transparent;
+    transition: all 0.3s ease-in-out;
   }
 
-  & > div:last-child footer button:first-child{
+  & > div:last-child footer button:nth-child(2){
     background-color: #fff;
-    border-radius: 5px;
-    border: none;
     width: 159px;
     height: 60px;
   }
+  & > div:last-child footer button:nth-child(2):hover{
+    background-color: #bbb ;
+    box-shadow: inset 0px 0px 0px 3px #fff;
+  }
   & > div:last-child footer button:last-child{
     background-color: #515451;
-    border-radius: 5px;
-    border: none;
     color: #fff;
     width: 234px;
     height: 60px;
     font-weight: 400;
+  }
+  & > div:last-child footer button:last-child:hover{
+    background-color: transparent ;
+    box-shadow: inset 0px 0px 0px 3px #515451;
   }
   & > div:last-child footer button img{
     width: 27px;
@@ -195,9 +208,11 @@ export const Main = styled.main`
 // styles from carousel
 export const WrapperCarrousel = styled.div`
   margin-left: 72px; 
-  height:28%;
+  height: auto;
+  margin-bottom: 28px;
   & h3{
     color: #fff;
+    margin-bottom: 12px;
   }
 
   @media (max-width: 1200px) {
@@ -209,8 +224,7 @@ export const WrapperCarrousel = styled.div`
     margin-bottom: 4px;
     } 
     &{
-      height: auto;
-      margin-left: 0;
+      margin-left: 12px;
     }
   }
   `

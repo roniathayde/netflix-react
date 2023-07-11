@@ -1,7 +1,7 @@
 import LogoMini  from '../../assets/images/netflixlogo mini.png'
 import NomeFilm from '../../assets/images/Logo film default.png'
 import Top10 from '../../assets/images/Top10.png'
-import Play from '../../assets/images/Polygon 1.jpg'
+import Play from '../../assets/images/Polygon play.png'
 import Info  from '../../assets/images/Info btn.png'
 import MainBG  from '../../assets/images/Main Show BG.jpg'
 
@@ -24,7 +24,9 @@ import { Plus } from 'lucide-react'
  
 export const Home = () => {
 const breakPoints = [
-  { width: 1220, itemsToShow: 1 },
+  { width: 700, itemsToShow: 1 },
+  { width: 900, itemsToShow: 2 },
+  { width: 1220, itemsToShow: 4 },
   { width: 1300, itemsToShow: 6 }
 ]
 
