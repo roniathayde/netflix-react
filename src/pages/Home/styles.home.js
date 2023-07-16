@@ -19,7 +19,7 @@ export const Main = styled.main`
   filter: brightness(0.8);
   flex-direction: column;
   justify-content: center;
-  gap: 42px;
+  gap: 8px;
 
 
 
@@ -42,7 +42,7 @@ export const Main = styled.main`
   align-items: start;
   justify-content: center;
   margin-left: 72px;
-  height: 72% ;
+  height: auto ;
 
   & > div:first-child{
     display: flex;
@@ -209,7 +209,7 @@ export const Main = styled.main`
 export const WrapperCarrousel = styled.div`
   margin-left: 72px; 
   height: auto;
-  margin-bottom: 28px;
+  margin-bottom: 12px;
   & h3{
     color: #fff;
     margin-bottom: 12px;
@@ -232,7 +232,8 @@ export const WrapperCarrousel = styled.div`
 // styles from carousel
 export const ItemCarrousel = styled.div`
   width: 100%;
-  height: 200px;
+  /* height: 200px; */
+  height: 20vh;
   background-repeat: no-repeat;
   border-radius: 5px;
   overflow: hidden;
